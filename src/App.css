@@ -6,6 +6,15 @@ body{
   background-color: rgb(9, 9, 9);
 }
 
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(30, 30, 30);
+  border-radius: 20px;
+}
+
 /*Header*/
 .header{
   position: fixed;
@@ -79,6 +88,7 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 70px;
+  border-bottom: 1px solid rgb(42, 42, 42);;
 }
 
 .section1{
@@ -162,6 +172,54 @@ body{
   align-items: center;
 }
 
+/*Page 2*/
+.page2{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1page2{
+  width: 50%;
+  height: 70vh;
+  background-color: black;
+  background-image: url('/earth2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.section2page2{
+  width: 50%;
+  height: 70vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.headingpage2{
+  width: 80%;
+  font-size: 48px;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.reason{
+  width: 80%;
+  font-size: 22px;
+  color: grey;
+}
+.buttonsectionpage2{
+  margin-top: 25px;
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+
+
+
 @media (max-width: 900px) {
   
   .menubutton{
@@ -223,7 +281,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-right: 1px solid rgb(42, 42, 42);
+    border-top: 1px solid rgb(42, 42, 42);
     background-color: black;
   }
   .heading{
@@ -299,4 +357,52 @@ body{
     justify-content: center;
     align-items: center;
   }
+
+
+  /*Page 2*/
+.page2{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.section1page2{
+  width: 100%;
+  height: 40vh;
+  background-color: black;
+  background-image: url('/earth2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.section2page2{
+  width: 100%;
+  height: 60vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.headingpage2{
+  width: 80%;
+  font-size: 36px;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+.reason{
+  width: 80%;
+  font-size: 18px;
+  color: grey;
+}
+.buttonsectionpage2{
+  margin-top: 16px;
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 }

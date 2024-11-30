@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Player } from '@lottiefiles/react-lottie-player';
+
 import './App.css';
+import Header from './components/header';
+import Page1 from './pages/page1';
+import Page2 from './pages/page2';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -34,113 +37,11 @@ function App() {
   }, []);
   return (
     <>
-      <div className="header">
-        <div className="comp">
-          <img src="/logo.png" alt="" className="complogo" />
-          <div className="compname">NationNode</div>
-        </div>
-        <div className="menu">
-          <div className="link">Home</div>
-          <div className="link">Countries</div>
-          <div className="link">API</div>
-          <div className="link">Docs</div>
-          <div className="link">About</div>
-          <div className="link">Contact</div>
-          <div className="link highligted">Portfolio</div>
-        </div>
-        <div className="respmenubutton">
-          <img
-            src="/menu.png"
-            alt="Menu Icons"
-            className="menubutton"
-            onClick={() => {
-              const respmenudiv = document.querySelector('.respmenudiv');
-              respmenudiv.style.transition = 'transform 0.3s ease-in-out';
-              respmenudiv.style.transform = 'translateX(0)';
-            }}
-          />
-        </div>
-      </div>
-      <div className="respmenudiv">
-        <div
-          className="close"
-          onClick={() => {
-            const respmenudiv = document.querySelector('.respmenudiv');
-            respmenudiv.style.transition = 'transform 0.3s ease-in-out';
-            respmenudiv.style.transform = 'translateX(100%)';
-          }}
-        >
-          x
-        </div>
-      </div>
-      <div className="page1">
-        <div className="section1">
-          <div className="heading">
-            Empowering Your Apps with Global Knowledge.
-          </div>
-          <div className="subheadline">
-            Effortlessly access accurate, country-specific data to power your
-            apps. From population stats to currency details, our free API
-            delivers it all—fast, reliable, and always up-to-date.
-          </div>
-          <div className="buttonssection">
-            <div className="primarybutton">
-              API Docs{' '}
-              <img src="/arrow.png" alt="arrow" className="arrowdown" />
-            </div>
-            <div className="secondarybutton">
-              Contribute
-              <img src="/arrow.png" alt="arrow" className="arrowdown" />
-            </div>
-          </div>
-        </div>
-        <div className="section2">
-          <Player
-            src="/globe.json"
-            className="player"
-            loop
-            autoplay
-            // background="black"
-            style={{ width: '100%' }}
-          />
-        </div>
-      </div>
+      <Header />
+      <Page1 />
+      <Page2 />
     </>
   );
 }
 
 export default App;
-
-{
-  /* <img
-            src="/menu.png"
-            alt="Menu Icons"
-            className="menubutton"
-            onClick={() => {
-              const respmenudiv = document.querySelector('.respmenudiv');
-              respmenudiv.style.transition = 'transform 0.3s ease-in-out';
-              respmenudiv.style.transform = 'translateX(0)';
-            }}
-          />
-          <div
-            className="close"
-            onClick={() => {
-              const respmenudiv = document.querySelector('.respmenudiv');
-              respmenudiv.style.transition = 'transform 0.3s ease-in-out';
-              respmenudiv.style.transform = 'translateX(100%)';
-            }}
-          >
-            x
-          </div> */
-}
-
-{
-  /* <Player
-          src="/globe.json"
-          className="player"
-          loop
-          autoplay
-          background="black"
-          style={{ height: '700px', width: '700px' }}
-        /> */
-}

@@ -201,14 +201,14 @@ body{
     height: 100vh;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 100%;
     bottom: 0;
     z-index: 101;
     background-color: black;
   }
   .page1{
     width: 100%;
-    min-height: calc(130vh - 70px);
+    min-height: calc(120vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,6 +290,7 @@ body{
     width: 20px;
   }
   .section2{
+    background-color: black;
     width: 100%;
     height: 40%;
     display: flex;

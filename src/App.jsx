@@ -5,10 +5,13 @@ import './App.css';
 import Header from './components/header';
 import Page1 from './pages/page1';
 import Page2 from './pages/page2';
+import Page3 from './pages/page3';
+import Page4 from './pages/page4';
 
 function App() {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState(null);
+  const [country, setCountry] = useState([]);
 
   //Routes to be added
   // / - home
@@ -26,7 +29,11 @@ function App() {
         const response = await axios.get(
           'https://countries-api-abhishek.vercel.app/countries'
         );
+        const response2 = await axios.get(
+          'https://countries-api-abhishek.vercel.app/countries/india'
+        );
         setCountries(response.data);
+        setCountry(response2.data);
       } catch (err) {
         console.error('Error fetching countries:', err);
         setError('Failed to fetch countries. Please try again later.');
@@ -40,6 +47,8 @@ function App() {
       <Header />
       <Page1 />
       <Page2 />
+      <Page3 countries={countries} />
+      <Page4 countries={countries} country={country} />
     </>
   );
 }

@@ -4,6 +4,7 @@ body{
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
   background-color: rgb(9, 9, 9);
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -217,7 +218,124 @@ body{
   align-items: center;
 }
 
+/*page3*/
+.page3{
+  width: 100%; 
+  height: auto;
+}
+.flag{
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
 
+/*Page4*/
+.page4{
+  width: 100%;
+  
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+.headingpage4{
+  font-size: 48px;
+  color: white;
+  font-weight: 300;
+}
+.subheadingpage4{
+  color: grey;
+  font-size: 20px;
+  font-weight: 400;
+}
+.count{
+  color: royalblue;
+  font-weight: 600;
+}
+.searchbar{
+  width: 50%;
+  height: 80px;
+  border: 2px solid white;
+  background-color: rgb(12, 12, 12);
+  border-radius: 80px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchicon{
+  width: 40px;
+  padding: 20px;
+}
+.searchfield{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  outline: none;
+}
+.searchIcon{
+  width: 40px;
+  padding: 20px;
+}
+.results{
+  width: 50%;
+  background-color: aliceblue;
+  min-height: none;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+.searchresult{
+  margin-top: 60px;
+  width: 80%;
+  height: 50vh;
+  border: 1px solid grey;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flagresult{
+  height: 90%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+.flagimage{
+  height: 100%;
+  border-radius: 12px;
+  margin-left: 20px;
+}
+.resultinfo{
+  width: 100%;
+  height: 85%;
+  margin-right: 20px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+.error{
+  border:2px solid red;
+  background-color: rgba(255, 0, 0, 0.067);
+  margin-top: 20px;
+  color: red;
+  padding: 20px;
+  border-radius: 40px;
+}
 
 
 @media (max-width: 900px) {
@@ -404,5 +522,113 @@ body{
   justify-content: start;
   align-items: center;
 }
+/*page3*/
+.page3{
+  width: 100%; 
+  height: auto;
+}
+.flag{
+  width: 100px;
+  height: 66px;
+  object-fit: cover;
+}
+/*Page4*/
+.page4{
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+.headingpage4{
+  font-size: 36px;
+  color: white;
+  font-weight: 300;
+}
+.subheadingpage4{
+  color: grey;
+  font-size: 16px;
+  font-weight: 400;
+}
+.count{
+  color: royalblue;
+  font-weight: 600;
+}
+.searchbar{
+  width: 80%;
+  height: 70px;
+  border: 2px solid white;
+  background-color: rgb(12, 12, 12);
+  border-radius: 80px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchicon{
+  width: 30px;
+  padding: 20px;
+}
+.searchfield{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  outline: none;
+}
+.searchIcon{
+  width: 30px;
+  padding: 20px;
+}
+.searchresult{
+  margin-top: 40px;
+  width: 90%;
+  height: 80vh;
+  border: 1px solid grey;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flagresult{
+  width: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flagimage{
+  width: 80%;
+  border-radius: 12px;
+  margin: 0;
+}
+.resultinfo{
+  width: 80%;
+  margin-right: 20px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+.res{
+  width: 100%;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 
 }

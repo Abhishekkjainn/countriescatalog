@@ -74,14 +74,8 @@ function App() {
         </div>
       </div>
       <div className="page1">
-        {/* <Player
-          src="/globe.json"
-          className="player"
-          loop
-          autoplay
-          background="black"
-          style={{ height: '700px', width: '700px' }}
-        /> */}
+        <div className="section1"></div>
+        <div className="section2"></div>
       </div>
     </>
   );
@@ -110,4 +104,15 @@ export default App;
           >
             x
           </div> */
+}
+
+{
+  /* <Player
+          src="/globe.json"
+          className="player"
+          loop
+          autoplay
+          background="black"
+          style={{ height: '700px', width: '700px' }}
+        /> */
 }

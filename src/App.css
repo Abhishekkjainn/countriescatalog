@@ -51,7 +51,6 @@ body{
   color: grey;
   font-size: 14px;
   font-weight: 600;
-  /* margin: 12px; */
   padding: 12px;
   padding-left: 16px;
   padding-right: 16px;
@@ -63,13 +62,14 @@ body{
   cursor: pointer;
   transition: 0.3s;
   color: white;
-  /* background-color: rgb(20, 20, 20); */
 }
 .menubutton{
   width: 25px;
   display: none;
 }
-
+.respmenudiv{
+  display: none;
+}
 
 /*page1*/
 .page1{
@@ -79,14 +79,22 @@ body{
   justify-content: center;
   align-items: center;
 }
-.respmenudiv{
-  display: none;
+
+.section1{
+  width: 50%;
+  height: 100%;
+  background-color: aqua;
+}
+.section2{
+  width: 50%;
+  height: 100%;
+  background-color: rosybrown;
 }
 
 @media (max-width: 900px) {
   .menubutton{
     width: 20px;
-    margin-right: 20px;
+    margin-right: 12px;
     display: flex;
   }
   .comp{
@@ -109,11 +117,11 @@ body{
     font-size: 22px;
     color: white;
     font-weight: 600;
-    margin-left: 10px;
+    margin-left: 6px;
   }
   .complogo{
     width: 20px;
-    margin-left: 25px;
+    margin-left: 12px;
   }
   .respmenudiv{
     display: flex;

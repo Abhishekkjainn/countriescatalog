@@ -397,8 +397,10 @@ a{
     top: 0;
     right: 0;
     bottom: 0;
+    transform: translateX(100%);
     z-index: 101;
-    background-color: black;
+    background-color: rgb(6, 6, 6);
+    border-left: 1px solid grey;
   }
   .page1{
     width: 100%;

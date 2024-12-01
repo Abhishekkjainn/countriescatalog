@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -11,16 +12,35 @@ export default function Page4({ country }) {
   }, [country]);
 
   // Fetch country data based on the name entered
+  // const fetchCountry = async (name) => {
+  //   try {
+  //     const response = await axios.get(
+  //       `https://countries-api-abhishek.vercel.app/countries/${name}`
+  //     );
+  //     setError(null);
+  //     setSearchCountry(response.data.data); // Update state with the fetched data
+  //   } catch (err) {
+  //     console.error('Error fetching country:', err);
+  //     setError(response.data.message);
+  //   }
+  // };
+
   const fetchCountry = async (name) => {
     try {
       const response = await axios.get(
         `https://countries-api-abhishek.vercel.app/countries/${name}`
       );
-      setError(null);
-      setSearchCountry(response.data); // Update state with the fetched data
+      setError(null); // Clear any previous errors
+      setSearchCountry(response.data.data); // Update state with the fetched country data
     } catch (err) {
       console.error('Error fetching country:', err);
-      setError('Failed to fetch country data. Please try again later.');
+
+      // Check if the error is from the API and set the error message
+      if (err.response && err.response.data && err.response.data.message) {
+        setError(err.response.data.details || err.response.data.message); // Set error message or details from the response
+      } else {
+        setError('An unexpected error occurred. Please try again later.');
+      }
     }
   };
 

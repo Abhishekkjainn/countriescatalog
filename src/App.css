@@ -15,6 +15,12 @@ body{
   background-color: rgb(30, 30, 30);
   border-radius: 20px;
 }
+Link{
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
 
 /*Header*/
 .header{
@@ -90,6 +96,9 @@ body{
   align-items: center;
   margin-top: 70px;
   border-bottom: 1px solid rgb(42, 42, 42);;
+}
+.height{
+  height: 80px;
 }
 
 .section1{
@@ -335,6 +344,15 @@ body{
   color: red;
   padding: 20px;
   border-radius: 40px;
+}
+
+/*Page5*/
+.page5{
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
 }
 
 

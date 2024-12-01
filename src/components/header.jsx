@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <>
@@ -7,13 +8,58 @@ export default function Header() {
           <div className="compname">NationNode</div>
         </div>
         <div className="menu">
-          <div className="link">Home</div>
-          <div className="link">Countries</div>
-          <div className="link">API</div>
-          <div className="link">Docs</div>
+          <Link to={'/'} className="link">
+            Home
+          </Link>
+          <Link to={'/countries'} className="link">
+            Countries
+          </Link>
+          {/* <Link
+            to={'https://countries-api-abhishek.vercel.app/'}
+            className="link"
+          >
+            API
+          </Link> */}
+          <a
+            href="https://countries-api-abhishek.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            API
+          </a>
+          {/* <Link
+            to={
+              'https://github.com/Abhishekkjainn/countriesAPI/blob/main/README.md'
+            }
+            className="link"
+          >
+            Docs
+          </Link> */}
+          <a
+            href="https://github.com/Abhishekkjainn/countriesAPI/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            Docs
+          </a>
           <div className="link">About</div>
           <div className="link">Contact</div>
-          <div className="link highligted">Portfolio</div>
+          {/* <Link
+            to={'https://abhishekjainn.vercel.app'}
+            className="link highligted"
+          >
+            Portfolio
+          </Link> */}
+          <a
+            href="https://abhishekjainn.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            Portfolio
+          </a>
         </div>
         <div className="respmenubutton">
           <img

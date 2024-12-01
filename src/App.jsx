@@ -1,12 +1,11 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import './App.css';
 import Header from './components/header';
-import Page1 from './pages/page1';
-import Page2 from './pages/page2';
-import Page3 from './pages/page3';
-import Page4 from './pages/page4';
+import Home from './components/home';
+import Countries from './components/countries';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -14,9 +13,9 @@ function App() {
   const [country, setCountry] = useState([]);
 
   //Routes to be added
-  // / - home
-  // /countries - Load all the countries with a UI
-  // /countries/india - Load all the data related to India with a UI
+  // / - home -- Done
+  // /countries - Load all the countries with a UI -- Done
+  // /countries/india - Load all the data related to India with a UI -- Done
   // /API - Take to API URL
   // /Docs - Take to API Docs
   // /About - About Abhishek Jain Developer
@@ -32,8 +31,8 @@ function App() {
         const response2 = await axios.get(
           'https://countries-api-abhishek.vercel.app/countries/india'
         );
-        setCountries(response.data);
-        setCountry(response2.data);
+        setCountries(response.data.data);
+        setCountry(response2.data.data);
       } catch (err) {
         console.error('Error fetching countries:', err);
         setError('Failed to fetch countries. Please try again later.');
@@ -43,13 +42,19 @@ function App() {
     fetchCountries();
   }, []);
   return (
-    <>
+    <Router>
       <Header />
-      <Page1 />
-      <Page2 />
-      <Page3 countries={countries} />
-      <Page4 countries={countries} country={country} />
-    </>
+      <Routes>
+        <Route
+          path="/"
+          element={<Home countries={countries} country={country} />}
+        />
+        <Route
+          path="/countries"
+          element={<Countries countries={countries} country={country} />}
+        />
+      </Routes>
+    </Router>
   );
 }
 

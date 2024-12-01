@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Player } from '@lottiefiles/react-lottie-player';
 export default function Page1() {
   return (
@@ -12,13 +13,23 @@ export default function Page1() {
           it all—fast, reliable, and always up-to-date.
         </div>
         <div className="buttonssection">
-          <div className="primarybutton">
+          <a
+            href="https://github.com/Abhishekkjainn/countriesAPI/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primarybutton"
+          >
             API Docs <img src="/arrow.png" alt="arrow" className="arrowdown" />
-          </div>
-          <div className="secondarybutton">
+          </a>
+          <a
+            href="https://github.com/Abhishekkjainn/countriesAPI/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondarybutton"
+          >
             Contribute
             <img src="/arrow.png" alt="arrow" className="arrowdown" />
-          </div>
+          </a>
         </div>
       </div>
       <div className="section2">

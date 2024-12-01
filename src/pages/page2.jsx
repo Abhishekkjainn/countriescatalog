@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Page2() {
   return (
     <div className="page2">
@@ -10,10 +11,15 @@ export default function Page2() {
           applications effortlessly.
         </div>
         <div className="buttonsectionpage2">
-          <div className="primarybutton">
+          <a
+            href="https://github.com/Abhishekkjainn/countriesAPI/blob/main/README.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primarybutton"
+          >
             Check Docs{' '}
             <img src="/arrow.png" alt="arrow" className="arrowdown" />
-          </div>
+          </a>
         </div>
       </div>
       <div className="section1page2"></div>
